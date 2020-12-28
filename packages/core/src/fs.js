@@ -119,7 +119,7 @@ function dirscribe(root, opts) {
                 return build(filePath, stat, root, ext);
             })
             .then(function (desc) {
-                if (recursive && statCache.isDirectory()) {
+                if (recursive && statCache.isDirectory() && Path.basename(filePath) != 'node_modules') {
                     return readdir(filePath).then(function (children) {
                         desc.children = children;
                         return desc;

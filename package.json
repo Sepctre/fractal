@@ -103,7 +103,7 @@
     "test": "npm run validate && lerna run test",
     "contributors:add": "all-contributors add",
     "contributors:generate": "all-contributors generate",
-    "postinstall": "cd packages/fractal/ && yarn"
+    "postinstall": "cd packages/fractal/ && npm install"
   },
   "husky": {
     "hooks": {
